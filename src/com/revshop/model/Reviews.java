@@ -1,0 +1,74 @@
+package com.revshop.model;
+
+import java.sql.Timestamp;
+
+public class Reviews {
+
+	private int reviewId;
+    private int productId;
+    private int userId;
+    private int rating;
+    private String reviewComment;
+    private Timestamp createdAt;
+    
+    public Reviews()
+    {
+    	
+    }
+
+	public Reviews(int productId, int userId, int rating, String reviewComment) {
+		this.productId = productId;
+		this.userId = userId;
+		this.rating = rating;
+		this.reviewComment = reviewComment;
+	}
+
+	public int getReviewId() {
+		return reviewId;
+	}
+
+	public void setReviewId(int reviewId) {
+		this.reviewId = reviewId;
+	}
+
+	public int getProductId() {
+		return productId;
+	}
+
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+
+	public String getReviewComment() {
+		return reviewComment;
+	}
+
+	public void setReviewComment(String reviewComment) {
+		this.reviewComment = reviewComment;
+	}
+
+	public Timestamp getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Timestamp createdAt) {
+		this.createdAt = createdAt;
+	}
+}
+
