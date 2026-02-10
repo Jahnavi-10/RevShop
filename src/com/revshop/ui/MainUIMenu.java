@@ -37,7 +37,7 @@ public class MainUIMenu
 	    }
 
 	   //Register menu
-	    private static void register() {
+	    private static int register() {
 
 	        System.out.print("Enter Name: ");
 	        String name = sc.nextLine();
@@ -48,7 +48,7 @@ public class MainUIMenu
     	    // Mobile validation
     	    if (!Validations.isValidNumber(phone)) {
     	        System.out.println("Invalid mobile number");
-    	        return -1;
+    	       
     	    }
 
 	        System.out.print("Enter Email: ");
@@ -56,7 +56,7 @@ public class MainUIMenu
 			// Email validation
     	    if (!Validations.isValidEmail(email)) {
     	        System.out.println("Invalid email format");
-    	        return -1;
+    	        
     	    }
 
 	        System.out.print("Enter Password: ");
@@ -64,7 +64,7 @@ public class MainUIMenu
 			 // Password validation
     	    if (!Validations.isValidPassword(password)) {
     	        System.out.println("Password must contain uppercase, lowercase, digit, special char and min 8 length");
-    	        return -1;
+    	       
     	    }
 
 	        System.out.print("Confirm Password: ");
@@ -102,6 +102,7 @@ public class MainUIMenu
 	            System.out.println("Registration successful! User ID: " + userId);
 	        else
 	            System.out.println("Registration failed!");
+	
 	    }
 
 	    //Login Method
