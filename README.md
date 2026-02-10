@@ -2,13 +2,21 @@
 
 ## Project Overview
 
-**RevShop** is a secure, console-based e-commerce application developed using **Java**, **JDBC**, and **MySQL**.
-The system supports two types of users:
+**RevShop** is a secure, console-based e-commerce application developed using **Java, JDBC, and MySQL**.  
+The system enables interaction between **Buyers** and **Sellers** through a structured and modular architecture.
 
-* **Buyers** – can browse products, manage cart, place orders, and give reviews
-* **Sellers** – can add products, manage inventory, and view orders
+The application is designed using **Object-Oriented Programming (OOP)** principles and follows a **layered architecture** (UI, Service, DAO, Model), making it scalable for future migration into a web or microservices-based system.
 
-The application follows **OOP principles** and is structured using a layered architecture (UI, Service, DAO, Model).
+---
+
+## Problem Statement
+
+Traditional small-scale sellers often lack a simple system to manage products, inventory, and customer orders efficiently.  
+RevShop addresses this by providing a centralized platform where:
+
+- Buyers can browse and purchase products
+- Sellers can manage inventory and orders
+- The system maintains secure and structured data handling
 
 ---
 
@@ -16,72 +24,93 @@ The application follows **OOP principles** and is structured using a layered arc
 
 ### Buyer Module
 
-* Register and Login
-* Browse available products
-* Add products to cart
-* Manage cart items
-* Place orders
-* Add product reviews
-* Manage wishlist
+- User Registration and Login
+- Browse available products
+- Add products to cart
+- Manage cart items
+- Place orders
+- Add product reviews
+- Manage wishlist
 
 ### Seller Module
 
-* Seller Registration and Login
-* Add new products
-* Update product details
-* Delete products
-* View orders
-* Manage inventory stock
+- Seller Registration and Login
+- Add new products
+- Update product details
+- Delete products
+- View customer orders
+- Manage inventory stock
 
 ### Common Features
 
-* Secure authentication
-* Password reset (Forgot Password)
-* Input validations using Regex
-* Structured database design
-* Exception handling
+- Secure authentication system
+- Forgot Password functionality
+- Input validation using Regex
+- Exception handling
+- Structured database design
 
 ---
 
 ## Technology Stack
 
-**Frontend (Interface)**
+### Frontend (Interface)
 
-* Java Console (Scanner-based UI)
+- Java Console (Scanner-based UI)
 
-**Backend**
+### Backend
 
-* Java
-* JDBC
+- Java
+- JDBC
 
-**Database**
+### Database
 
-* MySQL
+- MySQL
 
-**Tools Used**
+### Tools Used
 
-* Eclipse / IntelliJ IDEA
-* MySQL Workbench
-* Git & GitHub
+- Eclipse / IntelliJ IDEA
+- MySQL Workbench
+- Git & GitHub
+
+---
+
+## Architecture Diagram
+
+The application follows a layered architecture separating presentation, business logic, and database operations.
+
+![Architecture Diagram](Architectural_Diagram.jpeg)
 
 ---
 
 ## Project Architecture
 
-The project follows a **layered architecture**:
+The project is designed using a **Layered Architecture**:
 
-* **UI Layer**
+### UI Layer
 
-  * Handles user interaction through console menus
-* **Service Layer**
+- Handles user interaction through console menus
+- Accepts user inputs and displays outputs
 
-  * Contains business logic
-* **DAO Layer**
+### Service Layer
 
-  * Handles database operations using JDBC
-* **Model Layer**
+- Contains business logic
+- Processes user requests
+- Validates data before sending to DAO
 
-  * Contains entity classes like User, Product, Cart, Orders, Reviews
+### DAO Layer
+
+- Handles database operations using JDBC
+- Executes SQL queries
+
+### Model Layer
+
+- Contains entity classes such as:
+  - User
+  - Product
+  - Cart
+  - Orders
+  - Reviews
+  - Wishlist
 
 ---
 
@@ -89,50 +118,40 @@ The project follows a **layered architecture**:
 
 Main tables used in the project:
 
-* Users
-* Products
-* Cart
-* Orders
-* Order Items
-* Reviews
-* Wishlist
+- Users
+- Products
+- Cart
+- Orders
+- Order_Items
+- Reviews
+- Wishlist
+
+---
+
+## Entity Relationship (ER) Diagram
+
+The ER diagram represents the relationships between users, products, orders, cart, and other entities.
+
+![ER Diagram](ER_Diagram.jpeg)
 
 ---
 
 ## Validations Implemented
 
-* Email validation using Regex
-* Password strength validation
-* Mobile number validation
-* Input checks for empty values
+- Email validation using Regex
+- Password strength validation
+- Mobile number validation
+- Empty input checks
+- Exception handling for invalid operations
 
 ---
 
-## How to Run the Project
+## Security Features
 
-1. Clone the repository
-2. Open the project in Eclipse/IntelliJ
-3. Create the database in MySQL
-
-```sql
-CREATE DATABASE revshop_db;
-USE revshop_db;
-```
-
-4. Execute all table creation scripts
-5. Update DB credentials in the connection class
-6. Run the **Main Class** (UI Menu)
-
----
-
-## Future Enhancements
-
-* GUI version using JavaFX / Web
-* Online payment integration
-* Admin dashboard
-* Order tracking
-* Email notifications
-* Product search with filters
+- Login authentication
+- Password reset using security question
+- Controlled access for Buyer and Seller roles
+- Prevention of invalid data entry through validations
 
 ---
 
