@@ -45,11 +45,27 @@ public class MainUIMenu
 	        System.out.print("Enter Phone: ");
 	        String phone = sc.nextLine();
 
+    	    // Mobile validation
+    	    if (!Validations.isValidNumber(phone)) {
+    	        System.out.println("Invalid mobile number");
+    	        return -1;
+    	    }
+
 	        System.out.print("Enter Email: ");
 	        String email = sc.nextLine();
+			// Email validation
+    	    if (!Validations.isValidEmail(email)) {
+    	        System.out.println("Invalid email format");
+    	        return -1;
+    	    }
 
 	        System.out.print("Enter Password: ");
 	        String password = sc.nextLine();
+			 // Password validation
+    	    if (!Validations.isValidPassword(password)) {
+    	        System.out.println("Password must contain uppercase, lowercase, digit, special char and min 8 length");
+    	        return -1;
+    	    }
 
 	        System.out.print("Confirm Password: ");
 	        if (!password.equals(sc.nextLine())) {
